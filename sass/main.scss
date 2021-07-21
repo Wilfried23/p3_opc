@@ -1,0 +1,389 @@
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("polices/shrikhand/shrikhand-regular-webfont.eot");
+  src: url("polices/shrikhand-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("polices/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"),
+    url("polices/shrikhand/shrikhand-regular-webfont.woff") format("woff"),
+    url("polices/shrikhand/shrikhand-regular-webfont.ttf") format("truetype"),
+    url("polices/shrikhand/shrikhand-regular-webfont.svg#shrikhandregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("polices/roboto/roboto-regular-webfont.eot");
+  src: url("polices/roboto/roboto-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("polices/roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url("polices/roboto/roboto-regular-webfont.woff") format("woff"),
+    url("polices/roboto/roboto-regular-webfont.ttf") format("truetype"),
+    url("polices/roboto/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  /*police Donuts pour barre de chargement*/
+  font-family: "pwyummydonutsmedium";
+  src: url("polices/donuts/pwyummydonuts-webfont.eot");
+  src: url("polices/donuts/pwyummydonuts-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("polices/donuts/pwyummydonuts-webfont.woff2") format("woff2"),
+    url("polices/donuts/pwyummydonuts-webfont.woff") format("woff"),
+    url("polices/donuts/pwyummydonuts-webfont.ttf") format("truetype"),
+    url("polices/donuts/pwyummydonuts-webfont.svg#pwyummydonutsmedium")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+$primaire: #9356dc;
+
+$secondaire: #ff79da;
+
+$tertiaire: #99e2d0;
+
+$quatre: rgb(236, 236, 236);
+
+$quatre_clair: rgb(175, 175, 175);
+
+/*Version Bureau*/
+.barre_de_chargement {
+  display: flex;
+  position: fixed;
+  top: 0; /*loading spinner*/
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  animation: barre_de_chargement 2s normal forwards ease-in;
+}
+@keyframes barre_de_chargement {
+  0% {
+    transform: scale(1);
+  }
+  99% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.message_chargement {
+  display: flex;
+  width: 50%;
+  height: auto;
+  font-family: "pwyummydonutsmedium", Arial, sans-serif; /*loading spinner text de chargement*/
+  color: $primaire;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.chargement {
+  width: 120px; /*loading spinner sphere rotatif*/
+  height: 120px;
+  border: 16px solid $quatre;
+  border-top: 16px solid $secondaire;
+  border-bottom: 16px solid $tertiaire;
+  border-radius: 100%;
+  opacity: 0.7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation: chargement 2s linear infinite;
+}
+@keyframes chargement {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* reglage de pages entiere */
+body {
+  width: 100%;
+  max-width: 75rem;
+  height: auto;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  font-family: "robotoregular", Arial, sans-serif;
+}
+h1 {
+  font-family: "shrikhandregular", Arial, sans-serif;
+  font-weight: normal;
+}
+h3 {
+  font-size: 1rem;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 12rem;
+  border-radius: 1rem 1rem 0 0;
+}
+.image_presentation img {
+  object-fit: cover;
+  width: 100%;
+  height: 12rem;
+  border-radius: initial;
+}
+header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  & .logo {
+    width: 35%;
+    margin: 5%;
+    height: auto;
+  }
+}
+/* barre de recherche */
+.search_position {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 3rem;
+  background-color: $quatre_clair;
+  border-top: 0.2rem solid $quatre_clair;
+  & .fa-map-marker-alt {
+    height: auto;
+    margin: 1%;
+    & + #localisation {
+      height: auto;
+      margin: 1%;
+      background-color: $quatre_clair;
+      border: none;
+    }
+  }
+}
+/*ombre border des box*/
+@mixin box_shadow {
+  box-shadow: 0.1875rem 0.1875rem 0.1875rem 0.1875rem darken($quatre, 15);
+}
+/* box de presentation */
+.box_pres {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  height: 20rem;
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  & > .presentation {
+    margin: 5%;
+  }
+}
+.presentation h2 {
+  font-family: "robotoregular", Arial, sans-serif;
+  font-weight: inherit;
+  font-size: 1rem;
+}
+/* button de presentation */
+.box_pres button {
+  border-radius: 2rem;
+  width: 30%;
+  height: 4rem;
+  @include box_shadow;
+  border: none;
+  margin: auto;
+  font-size: 1rem;
+  color: white;
+  background-color: $secondaire;
+  cursor: pointer;
+}
+
+/* BOX navigation du fonctionnement */
+.fonctionnement {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  background-color: white;
+  & .titre {
+    display: flex;
+    width: 25%;
+    font-size: 1rem;
+    margin-left: 1%;
+  }
+  & .button {
+    display: flex;
+    @include box_shadow;
+    justify-content: space-around;
+    margin-left: 110px;
+    margin-top: 4%;
+    width: 35%;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    & .nb_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      background-color: $primaire;
+      margin: 0.6rem 0rem 0rem 0rem;
+      width: 9%;
+      height: 2rem;
+      border-radius: 100%;
+    }
+  }
+}
+.button:hover {
+  background-color: #e8dcf7;
+  & .icon_image {
+    color: rgb(150, 56, 245);
+    opacity: 1;
+  }
+}
+.des_fonc {
+  width: 70%;
+}
+.icon_image {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin: auto;
+  opacity: 1;
+}
+/* SECTION BOX RESTAURANT */
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100rem;
+  margin: 5% 0 0 0;
+  background-color: $quatre;
+
+  & .titre {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+}
+.box_resto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 0 1rem 1rem;
+  @include box_shadow;
+  width: 80%;
+  height: auto;
+  margin: 1%;
+}
+.box_resto img {
+  border-radius: 0;
+}
+.nouveaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: $tertiaire;
+  color: #06644d;
+}
+.name {
+  display: flex;
+  height: auto;
+  background-color: white;
+  border: 1px solid $quatre;
+  color: black;
+  border-radius: 0 0 1rem 1rem;
+}
+.nom_titre {
+  width: 100%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* SECTION ANIMATIONS DU COEUR SUR PAGE ACCEUIL */
+.plein .fa-heart {
+  transform: scale(0);
+}
+.coeur {
+  display: inline-block;
+  align-items: center;
+  width: 10%;
+  margin: auto;
+  height: auto;
+  font-size: 30px;
+  & .plein {
+    display: none;
+    font-size: 30px;
+    color: transparent;
+  }
+  &:hover {
+    & .plein {
+      display: block;
+    }
+    & .vide {
+      display: none;
+      font-size: 30px;
+    }
+  }
+}
+.plein:hover .fa-heart {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 500ms ease-in-out;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, $secondaire, $primaire);
+}
+/* SECTION DU FOOTER */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  background-color: rgb(41, 40, 40);
+}
+footer a {
+  color: white;
+}
+.titre_footer {
+  display: flex;
+  text-align: center;
+  height: auto;
+  width: 100%;
+}
+.titre_footer h2 {
+  font-family: "shrikhandregular", Arial, sans-serif;
+  color: white;
+  width: 100%;
+  align-items: center;
+}
+address {
+  font-style: normal;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0%;
+}
+ul,
+li {
+  margin: 2%;
+}
+
+/* SECTION PAGES ANNEXE 1 2 3 4 SECONDAIRE */
