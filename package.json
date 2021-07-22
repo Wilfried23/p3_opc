@@ -3,9 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wilfried23/p3_opc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Wilfried23/p3_opc/issues"
+  },
+  "homepage": "https://github.com/Wilfried23/p3_opc#readme",
   "description": ""
 }
