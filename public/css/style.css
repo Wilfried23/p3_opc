@@ -1,74 +1,25 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("polices/shrikhand/shrikhand-regular-webfont.eot");
+  src: url("polices/shrikhand-regular-webfont.eot?#iefix") format("embedded-opentype"), url("polices/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("polices/shrikhand/shrikhand-regular-webfont.woff") format("woff"), url("polices/shrikhand/shrikhand-regular-webfont.ttf") format("truetype"), url("polices/shrikhand/shrikhand-regular-webfont.svg#shrikhandregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("polices/roboto/roboto-regular-webfont.eot");
+  src: url("polices/roboto/roboto-regular-webfont.eot?#iefix") format("embedded-opentype"), url("polices/roboto/roboto-regular-webfont.woff2") format("woff2"), url("polices/roboto/roboto-regular-webfont.woff") format("woff"), url("polices/roboto/roboto-regular-webfont.ttf") format("truetype"), url("polices/roboto/roboto-regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*Version Bureau*/
-.barre_de_chargement {
-  display: flex;
-  position: fixed;
-  top: 0;
-  /*loading spinner*/
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  z-index: 999;
-  animation: barre_de_chargement 2s normal forwards ease-in;
-}
-
-@keyframes barre_de_chargement {
-  0% {
-    transform: scale(1);
-  }
-  99% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-.message_chargement {
-  display: flex;
-  width: 50%;
-  height: auto;
-  font-family: "pwyummydonutsmedium", Arial, sans-serif;
-  /*loading spinner text de chargement*/
-  color: #9356dc;
-  font-size: 1.5rem;
-  font-weight: bold;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.chargement {
-  width: 120px;
-  /*loading spinner sphere rotatif*/
-  height: 120px;
-  border: 16px solid #ececec;
-  border-top: 16px solid #ff79da;
-  border-bottom: 16px solid #99e2d0;
-  border-radius: 100%;
-  opacity: 0.7;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  animation: chargement 2s linear infinite;
-}
-
-@keyframes chargement {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
 /* reglage de pages entiere */
 body {
   width: 100%;
   max-width: 75rem;
   height: auto;
   margin: auto;
-  font-family: shr;
 }
 
 a {
@@ -81,11 +32,12 @@ ul {
 
 .container {
   font-family: roboto sans-serif;
+  font-weight: 2rem;
 }
 
 h1 {
-  font-family: Shrikhand sans-serif;
-  font-weight: 1.5rem;
+  font-family: "shrikhandregular", Arial, sans-serif;
+  font-weight: normal;
 }
 
 h3 {
@@ -340,7 +292,7 @@ footer a {
 }
 
 .titre_footer h2 {
-  font-family: Shrikhand sans-serif;
+  font-family: "shrikhandregular", Arial, sans-serif;
   color: white;
   width: 100%;
   align-items: center;
@@ -441,7 +393,7 @@ header a {
   margin: 10px auto 10px auto;
   border-radius: 10px;
   background-color: white;
-  animation: menu_entré 1.5s ease-in-out;
+  animation: menu_entré 2s ease-in-out;
   cursor: pointer;
 }
 .menu_entré .valide {
@@ -474,9 +426,9 @@ header a {
   margin: 10px auto 10px auto;
   border-radius: 10px;
   background-color: white;
-  animation: menu_entré 1.5s ease-in-out;
-  cursor: pointer;
   animation: menu_entré 2s ease-in-out;
+  cursor: pointer;
+  animation: menu_entré 4s ease-in-out;
 }
 .menu_plats .valide {
   display: flex;
@@ -508,9 +460,9 @@ header a {
   margin: 10px auto 10px auto;
   border-radius: 10px;
   background-color: white;
-  animation: menu_entré 1.5s ease-in-out;
+  animation: menu_entré 2s ease-in-out;
   cursor: pointer;
-  animation: menu_entré 3s ease-in-out;
+  animation: menu_entré 5s ease-in-out;
 }
 .menu_dessert .valide {
   display: flex;
