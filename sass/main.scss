@@ -124,10 +124,14 @@ header {
   @include box_shadow;
   border: none;
   margin: auto;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: white;
   background-color: $secondaire;
   cursor: pointer;
+  background: linear-gradient(to bottom right, $secondaire, $primaire);
+  &:hover {
+    filter: brightness(110%);
+  }
 }
 
 /* BOX navigation du fonctionnement */
@@ -515,10 +519,14 @@ button {
     width: 70%;
     height: 4rem;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: white;
     background-color: $secondaire;
     cursor: pointer;
+    background: linear-gradient(to bottom right, $secondaire, $primaire);
+    &:hover {
+      filter: brightness(110%);
+    }
   }
 
   .fonctionnement {
@@ -537,7 +545,6 @@ button {
       display: flex;
       justify-content: inherit;
       align-items: baseline;
-      border: 0.1rem solid gray;
       margin: auto;
       width: 85%;
       border-radius: 2rem;
@@ -569,5 +576,89 @@ button {
     height: auto;
     margin: 5% 0 0 0;
     background-color: $quatre;
+    & .titre {
+      display: flex;
+      width: 90%;
+      height: 1rem;
+      justify-content: initial;
+    }
+  }
+  .box_resto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0.1875rem 0 0 darken($quatre, 15);
+    border-radius: 0 0 1rem 1rem;
+    width: 90%;
+    height: auto;
+    margin: 5%;
+  }
+  .box_resto img {
+    border-radius: 1rem 1rem 0 0;
+  }
+  .nouveaux {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 2rem;
+    position: relative;
+    left: 65%;
+    top: 3rem;
+    text-align: center;
+    background: $tertiaire;
+    color: darken($tertiaire, 50);
+    border-radius: 0.2rem;
+  }
+  .name {
+    display: flex;
+    height: auto;
+    background-color: white;
+    border: 0.1rem solid $quatre;
+    color: black;
+    border-radius: 0 0 1rem 1rem;
+  }
+  .nom_titre {
+    width: 60%;
+    text-align: left;
+    margin: auto;
+    height: auto;
+    align-items: initial;
+  }
+  .coeur {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin: auto;
+    height: auto;
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin: auto;
+    background-color: rgb(41, 40, 40);
+  }
+  footer a {
+    color: white;
+  }
+  .titre_footer {
+    display: flex;
+    width: 90%;
+    text-align: start;
+    margin: 4%;
+    height: auto;
+  }
+  .titre_footer h2 {
+    font-family: "shrikhandregular", Arial, sans-serif;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+  ul,
+  li {
+    margin-bottom: 3%;
   }
 }
