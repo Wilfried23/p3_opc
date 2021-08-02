@@ -785,7 +785,8 @@ li {
   }
 
   .nom_resto {
-    width: 75%;
+    width: 110%;
+    font-weight: bold;
   }
 
   .page {
