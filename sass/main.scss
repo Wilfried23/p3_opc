@@ -748,5 +748,59 @@ button {
         filter: brightness(110%);
       }
     }
+    /* MIXIN POUR TOUT LES MENU DES PAGE ANNEXE 1 2 3 4 */
+    @mixin menu_tel {
+      display: flex;
+      height: auto;
+      width: 95%;
+      box-shadow: 0.187rem 0.187rem 0.187rem 0.187rem darken($quatre, 15);
+      margin: 1rem auto 1rem auto;
+      border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+      animation: menu_entré 2s linear;
+      cursor: pointer;
+      & .valide {
+        display: flex;
+        align-items: center;
+        height: auto;
+        transform: scaleX(0);
+        width: 40%;
+        border-radius: 0 1rem 1rem 0;
+        background-color: $tertiaire;
+        color: white;
+      }
+      &:hover {
+        & > .valide {
+          transform: scaleX(1);
+          transform-origin: right;
+          transition: transform 500ms ease-in-out;
+        }
+        & .fa-check-circle {
+          transform: rotate(360deg);
+          transition: transform 500ms ease-in-out;
+          font-size: 2rem;
+          margin: auto;
+        }
+        & .prix {
+          transform: translateX(-10%);
+          transition: transform 500ms ease-in-out;
+        }
+        & .description {
+          width: 50vw;
+          transition: width 500ms ease-in-out;
+        }
+      }
+    }
+    .menu_entré {
+      @include menu_tel;
+      animation: menu_entré 2s ease-in-out;
+    }
+    .menu_plats {
+      @include menu_tel;
+      animation: menu_entré 4s ease-in-out;
+    }
+    .menu_dessert {
+      @include menu_tel;
+      animation: menu_entré 5s ease-in-out;
+    }
   }
 }

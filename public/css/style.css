@@ -796,6 +796,7 @@ li {
     width: 100%;
     margin: auto;
     border-radius: 1rem 1rem 0 0;
+    /* MIXIN POUR TOUT LES MENU DES PAGE ANNEXE 1 2 3 4 */
   }
   .page .coeur {
     margin: 0;
@@ -843,6 +844,126 @@ li {
   }
   .page button:hover {
     filter: brightness(110%);
+  }
+  .page .menu_entré {
+    display: flex;
+    height: auto;
+    width: 95%;
+    box-shadow: 0.187rem 0.187rem 0.187rem 0.187rem #c6c6c6;
+    margin: 1rem auto 1rem auto;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    animation: menu_entré 2s linear;
+    cursor: pointer;
+    animation: menu_entré 2s ease-in-out;
+  }
+  .page .menu_entré .valide {
+    display: flex;
+    align-items: center;
+    height: auto;
+    transform: scaleX(0);
+    width: 40%;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #99e2d0;
+    color: white;
+  }
+  .page .menu_entré:hover > .valide {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_entré:hover .fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform 500ms ease-in-out;
+    font-size: 2rem;
+    margin: auto;
+  }
+  .page .menu_entré:hover .prix {
+    transform: translateX(-10%);
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_entré:hover .description {
+    width: 50vw;
+    transition: width 500ms ease-in-out;
+  }
+  .page .menu_plats {
+    display: flex;
+    height: auto;
+    width: 95%;
+    box-shadow: 0.187rem 0.187rem 0.187rem 0.187rem #c6c6c6;
+    margin: 1rem auto 1rem auto;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    animation: menu_entré 2s linear;
+    cursor: pointer;
+    animation: menu_entré 4s ease-in-out;
+  }
+  .page .menu_plats .valide {
+    display: flex;
+    align-items: center;
+    height: auto;
+    transform: scaleX(0);
+    width: 40%;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #99e2d0;
+    color: white;
+  }
+  .page .menu_plats:hover > .valide {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_plats:hover .fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform 500ms ease-in-out;
+    font-size: 2rem;
+    margin: auto;
+  }
+  .page .menu_plats:hover .prix {
+    transform: translateX(-10%);
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_plats:hover .description {
+    width: 50vw;
+    transition: width 500ms ease-in-out;
+  }
+  .page .menu_dessert {
+    display: flex;
+    height: auto;
+    width: 95%;
+    box-shadow: 0.187rem 0.187rem 0.187rem 0.187rem #c6c6c6;
+    margin: 1rem auto 1rem auto;
+    border-radius: 1.5rem 1.5rem 1.5rem 1.5rem;
+    animation: menu_entré 2s linear;
+    cursor: pointer;
+    animation: menu_entré 5s ease-in-out;
+  }
+  .page .menu_dessert .valide {
+    display: flex;
+    align-items: center;
+    height: auto;
+    transform: scaleX(0);
+    width: 40%;
+    border-radius: 0 1rem 1rem 0;
+    background-color: #99e2d0;
+    color: white;
+  }
+  .page .menu_dessert:hover > .valide {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_dessert:hover .fa-check-circle {
+    transform: rotate(360deg);
+    transition: transform 500ms ease-in-out;
+    font-size: 2rem;
+    margin: auto;
+  }
+  .page .menu_dessert:hover .prix {
+    transform: translateX(-10%);
+    transition: transform 500ms ease-in-out;
+  }
+  .page .menu_dessert:hover .description {
+    width: 50vw;
+    transition: width 500ms ease-in-out;
   }
 }
 
