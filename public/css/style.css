@@ -31,7 +31,7 @@ ul {
 }
 
 .container {
-  font-family: roboto sans-serif;
+  font-family: "robotoregular", Arial, sans-serif;
   font-weight: 2rem;
 }
 
@@ -98,7 +98,7 @@ header .logo {
 }
 
 .presentation h2 {
-  font-family: roboto sans-serif;
+  font-family: "robotoregular", Arial, sans-serif;
   font-weight: inherit;
   font-size: 1rem;
 }
@@ -529,7 +529,8 @@ button:hover {
   }
 
   h1 {
-    font-family: "shrikhlandregular", Arial, sans-serif;
+    font-family: "shrikhandregular", Arial, sans-serif;
+    font-weight: normal;
   }
 
   h3 {

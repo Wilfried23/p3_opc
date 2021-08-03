@@ -1,26 +1,26 @@
 @font-face {
-  font-family: 'shrikhandregular';
-  src: url('../fonts/shrikhand/shrikhand-regular-webfont.eot');
-  src: url('../fonts/shrikhand-regular-webfont.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
-    url('../fonts/shrikhand/shrikhand-regular-webfont.woff') format('woff'),
-    url('../fonts/shrikhand/shrikhand-regular-webfont.ttf') format('truetype'),
-    url('../fonts/shrikhand/shrikhand-regular-webfont.svg#shrikhandregular')
-      format('svg');
+  font-family: "shrikhandregular";
+  src: url("../fonts/shrikhand/shrikhand-regular-webfont.eot");
+  src: url("../fonts/shrikhand-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"),
+    url("../fonts/shrikhand/shrikhand-regular-webfont.woff") format("woff"),
+    url("../fonts/shrikhand/shrikhand-regular-webfont.ttf") format("truetype"),
+    url("../fonts/shrikhand/shrikhand-regular-webfont.svg#shrikhandregular")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'robotoregular';
-  src: url('../fonts/roboto/roboto-regular-webfont.eot');
-  src: url('../fonts/roboto/roboto-regular-webfont.eot?#iefix')
-      format('embedded-opentype'),
-    url('../fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
-    url('../fonts/roboto/roboto-regular-webfont.woff') format('woff'),
-    url('../fonts/roboto/roboto-regular-webfont.ttf') format('truetype'),
-    url('../fonts/roboto/roboto-regular-webfont.svg#robotoregular')
-      format('svg');
+  font-family: "robotoregular";
+  src: url("../fonts/roboto/roboto-regular-webfont.eot");
+  src: url("../fonts/roboto/roboto-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url("../fonts/roboto/roboto-regular-webfont.woff") format("woff"),
+    url("../fonts/roboto/roboto-regular-webfont.ttf") format("truetype"),
+    url("../fonts/roboto/roboto-regular-webfont.svg#robotoregular")
+      format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -50,11 +50,11 @@ ul {
   list-style: none;
 }
 .container {
-  font-family: roboto sans-serif;
+  font-family: "robotoregular", Arial, sans-serif;
   font-weight: 2rem;
 }
 h1 {
-  font-family: 'shrikhandregular', Arial, sans-serif;
+  font-family: "shrikhandregular", Arial, sans-serif;
   font-weight: normal;
 }
 h3 {
@@ -113,7 +113,7 @@ header {
   }
 }
 .presentation h2 {
-  font-family: roboto sans-serif;
+  font-family: "robotoregular", Arial, sans-serif;
   font-weight: inherit;
   font-size: 1rem;
 }
@@ -298,7 +298,7 @@ footer a {
   width: 100%;
 }
 .titre_footer h2 {
-  font-family: 'shrikhandregular', Arial, sans-serif;
+  font-family: "shrikhandregular", Arial, sans-serif;
   color: white;
   width: 100%;
   align-items: center;
@@ -456,11 +456,12 @@ button {
     list-style: none;
   }
   .container {
-    font-family: 'robotoregular', arial, sans-serif;
+    font-family: "robotoregular", arial, sans-serif;
     background-color: $quatre;
   }
   h1 {
-    font-family: 'shrikhlandregular', Arial, sans-serif;
+    font-family: "shrikhandregular", Arial, sans-serif;
+    font-weight: normal;
   }
   h3 {
     font-size: 1rem;
@@ -651,7 +652,7 @@ button {
     height: auto;
   }
   .titre_footer h2 {
-    font-family: 'shrikhandregular', Arial, sans-serif;
+    font-family: "shrikhandregular", Arial, sans-serif;
   }
   ul {
     display: flex;
