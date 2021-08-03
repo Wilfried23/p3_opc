@@ -969,14 +969,13 @@ li {
 }
 /* loading spinner du site */
 .loading_chargement {
+  /* creation d'une pseudo page blanche pour le spinner */
   display: flex;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: white;
-  z-index: 999;
+  z-index: 1;
   animation: loading_chargement 2s normal forwards ease-in;
 }
 
@@ -992,17 +991,25 @@ li {
   }
 }
 .chargement {
-  width: 120px;
-  height: 120px;
-  border: 16px solid #ececec;
+  width: 100px;
+  /* grandeur du cercle */
+  height: 100px;
+  /* grandeur du cercle */
+  border: 20px solid #ececec;
+  /* grandeur des bordur du cercle  */
   border-top: 16px solid #ff79da;
-  border-bottom: 16px solid #99e2d0;
-  border-radius: 100%;
-  opacity: 0.7;
+  /* couleur du top du cercle  */
+  border-bottom: 16px solid #ff79da;
+  /* couleur du bas du cercle */
+  border-radius: 66%;
+  /* Rondeur du cercle */
   position: absolute;
+  /* Positionnement du cercle */
   top: 50%;
+  /* centrage du cercle */
   left: 50%;
-  animation: chargment 2s linear infinite;
+  /* centrage du cercle */
+  animation: chargment 3s linear infinite;
 }
 
 @keyframes chargment {
