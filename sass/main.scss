@@ -810,10 +810,12 @@ button {
   /* creation d'une pseudo page blanche pour le spinner */
   display: flex;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: white;
-  z-index: 1;
+  z-index: 80;
   animation: loading_chargement 2s normal forwards ease-in;
 }
 @keyframes loading_chargement {
@@ -840,10 +842,23 @@ button {
   animation: chargment 3s linear infinite;
 }
 @keyframes chargment {
+  /* pseudo postionement du spinner plus vitesse de rotatation avec les deg */
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(720deg);
   }
+}
+.mesage_spiner {
+  display: flex;
+  width: 50%;
+  height: auto;
+  color: $primaire;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 70%;
+  left: 50%;
 }
