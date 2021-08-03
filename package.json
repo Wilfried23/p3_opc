@@ -16,5 +16,8 @@
     "url": "https://github.com/Wilfried23/p3_opc/issues"
   },
   "homepage": "https://github.com/Wilfried23/p3_opc#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.37.2"
+  }
 }
