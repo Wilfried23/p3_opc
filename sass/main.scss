@@ -51,7 +51,6 @@ ul {
 }
 .container {
   font-family: "robotoregular", Arial, sans-serif;
-  font-weight: 2rem;
 }
 h1 {
   font-family: "shrikhandregular", Arial, sans-serif;
@@ -276,7 +275,6 @@ header {
   transform-origin: bottom;
   transition: transform 500ms ease-in-out;
   -webkit-background-clip: text;
-  background-clip: text;
   background-image: linear-gradient(to bottom right, $secondaire, $primaire);
 }
 /* SECTION DU FOOTER */
